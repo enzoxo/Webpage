@@ -1,0 +1,433 @@
+/*Header*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+* {
+	box-sizing: border-box;
+}
+body{
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-offset-0 {margin-left: 0;}
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+
+[class*="col-"]{
+	float: left;
+	min-height: 1px;
+	padding: 0px;
+}
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+
+
+header{
+	background-color: #313234;
+	height: 50px;
+}
+
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header > nav img{
+	padding: 10px 0;
+}
+header > nav ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float: right;
+
+}
+
+/* elementy listy wyswietlaja sie obok siebie*/
+header>nav ul>li{
+	display: inline-block;
+}
+
+/*selektro do linków*/
+header>nav ul>li>a{
+	padding: 10px 20px;
+	height: 50px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*Zachowanie elementów listy menu po najechaniu */
+header>nav ul>li>a:hover{
+	color: #496065;
+}
+
+
+/*LOGO*/
+header>nav img{
+	padding: 10px 0;
+}
+
+/*Sekcja powitalna --> hero*/
+.hero{
+	position: relative;
+	width: 100%;
+	background-image: url(https://images.unsplash.com/photo-1512824793006-f5d72fb3d4d7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16b4951eb5816e966ccebf56660695e2&auto=format&fit=crop&w=950&q=80);
+	background-position: center;
+	overflow: hidden;
+	background-size: cover;
+	height: 50vh;
+
+}
+
+.slogan{
+	color: white;
+	text-align: left;
+	background: rgba(0, 0, 0, 0.6);
+	float:right;
+	margin:70px 0px;
+	text-transform: uppercase;
+	padding: 0 80px 0 30px;
+}
+
+.slogan h1::first-line{
+font-weight: 100;
+}
+
+.slogan h1{
+	font-weight: 900;
+}
+
+
+/*Sekcja korzyści --> ikony*/
+.grid{
+	margin-top: 30px;
+	text-align: center;
+}
+.grid h2{
+	color: #313332;
+	text-align: center;
+}
+
+.grid p{
+	text-align: justify;
+}
+
+.grid button{
+	height: 120px;
+	width: 120px;
+	color: #FFF;
+	margin 0;
+	border: 0;
+	border-radius:10%;
+	background-color: #313332;
+	cursor: pointer;
+	font-size: 80px;
+	line-height: 120px;
+}
+
+.grid .fa{
+	display: inline-block;
+	font-size: inherit;
+
+}
+
+.grid .col-4:hover .button{
+	background-color: #00C7E8;
+}
+
+.grid .col-4:hover h2{
+	color: #00C7E8;
+}
+
+/*Featured works*/
+.featured {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.featured h2{
+	font-weight: 900; /*nie rozumiem czemu tutaj nie dziala font-weight*/
+	color: #313332;
+	}
+
+
+.featured p{
+	margin: 0 auto;
+}
+
+
+/*galeria*/
+/*Kurcze dalej nie wiem, który fragment kodu wywołuje mi marginesy obok obrazków i pod nimi... :/*/
+.gallery {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 30px;
+}
+
+.gallery .surround {
+	height: 200px;
+	width: 100%;
+	position: relative;
+}
+
+.gallery img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	margin: 0;
+}
+
+.gallery .layer {
+	background-color: rgba(0, 0, 0, .5);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: none;
+}
+
+.surround:hover > .layer {
+	display: block;
+	cursor: pointer;
+}
+
+.gallery .layer i.fa {
+	font-size: 20px;
+	margin-top: 80px;
+	padding: 5px;
+	color: rgba(255, 255, 255, .9);
+
+}
+
+/*Team*/
+
+.team .surround {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.team img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+
+
+}
+
+.team .layer {
+	background-color: rgba(0, 0, 0, .5);
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	display: none;
+
+}
+
+.team p {
+	font-size: 18px;
+	color: #313234;
+	padding-top: 11px;
+	text-align: center;
+}
+
+.team .layer > p {
+	font-size: 20px;
+	color: #FFF;
+	margin-top: 90px;
+	cursor: pointer;
+	padding: 0;
+	text-align: center;
+}
+/*Sekcja z obrazkiem*/
+
+.baner{
+	height: 280px;
+
+}
+.baner > .container{
+	margin: 0 auto;
+}
+
+.phone {
+	background: url(https://images.wondershare.com/images/mobile/mobilego/default-android-photo-gallery.jpg) no-repeat;
+	height: 300px;
+	width: 200px;
+	margin-top: 50px;
+	margin-right: 25px;
+	float: right;
+}
+.baner h3{
+	text-align: left;
+	margin: 40px 0 0 25px;
+	font-size: 30px;
+	text-transform: uppercase;
+	float: left;
+}
+
+.baner p{
+	text-align: left;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+
+
+/*liczby*/
+
+.numbers{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+
+}
+
+.numbers p{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+	color: #00c7e8;
+
+}
+
+.numbers h2{
+	font-weight: 400;
+	font-size: 30px;
+}
+
+/*Footer*/
+
+.footer > .container {
+    margin: 0 auto ;
+    text-align: left;
+    padding-bottom: 40px;
+    padding-left: 10px;
+}
+
+.footer {
+    background-color: #313332;
+    color: white;
+    font-size: 16px;
+
+}
+
+.footer h4 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 800;
+
+ }
+
+
+
+.footer p {
+    padding: 0 30px 0 0 ;
+    font-size: 16px;
+}
+
+
+
+.social-media-tiles {
+    padding-top: 10px;
+    display: inline;
+}
+
+.social-media-tiles > .fa {
+    font-size: 22px;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: green;
+    margin: 5px 5px;
+    transition: .4s;
+		border-radius: 30%;
+}
+
+.facebook:hover .fa-facebook {
+    background-color: #4668b3;
+    transform: scale(1.2);
+
+}
+
+.twitter:hover .fa-twitter {
+    background-color: #3095d3;
+    transform: scale(1.2);
+}
+
+.google-plus:hover .fa-google-plus {
+    background-color: #c84222;
+    transform: scale(1.2);
+}
+
+.youtube:hover .fa-youtube {
+    background-color: #b94348;
+    transform: scale(1.2);
+}
+
+.linkedin:hover .fa-linkedin {
+    background-color: #0077b5;
+    transform: scale(1.2);
+}
+
+.instagram:hover .fa-instagram {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    transform: scale(1.2);
+}
+
+/* --------- COPYRIGHTS -----------  */
+footer {
+    height: 50px;
+    color: white;
+    background-color: #212322;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+}
